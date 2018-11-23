@@ -57,7 +57,7 @@ void main_task(intptr_t unused)
     ev3_sta_cyc(BT_TASK);
     end=false;
 
-    /* 以下、main_taskとして任意のプログラムを記述可能 */
+    /* 以下、main_taskとして任意のプログラムを記述可能(未確認) */
 
     while(1){}//無限ループ
     
