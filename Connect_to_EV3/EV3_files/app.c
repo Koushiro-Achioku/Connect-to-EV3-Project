@@ -29,6 +29,7 @@ int selected_port=1;
 int sensor[8]={0,0,0,0,0,0,0,0};
 int sensor_mode[8]={0,0,0,0,0,0,0,0};
 char str[5];
+
 bool end=false;
 
 void main_task(intptr_t unused)
@@ -54,8 +55,8 @@ void main_task(intptr_t unused)
     ev3_lcd_fill_rect(0,0,EV3_LCD_WIDTH,EV3_LCD_HEIGHT,EV3_LCD_WHITE);
     LCD_SET();
     ev3_led_set_color(LED_GREEN);
-    ev3_sta_cyc(BT_TASK);
-    end=false;
+    ev3_sta_cyc(BT_RECIEVE);
+    ev3_sta_cyc(BT_SEND);
 
     /* 以下、main_taskとして任意のプログラムを記述可能(未確認) */
 
@@ -132,13 +133,7 @@ void Recieve_value(){
     }
     else if((str[0]=='9')&&(str[1]=='9')&&(str[2]=='9')&&(str[3]=='9')){
         end=true;
-        ev3_lcd_fill_rect(0,0,EV3_LCD_WIDTH,EV3_LCD_HEIGHT,EV3_LCD_WHITE);
-        ev3_led_set_color(LED_RED);
-        ev3_lcd_draw_string("Value Sending",0,20);
-        ev3_lcd_draw_string("    was quited",0,40);
-        ev3_lcd_draw_string("Please quit",0,60);
-        ev3_lcd_draw_string("   EV3 Program",0,80);
-        ev3_stp_cyc(BT_TASK);
+        ev3_stp_cyc(BT_SEND);
     }
 
     if(str[1]=='0'){//NONE
@@ -183,108 +178,119 @@ void Recieve_value(){
 void LCD_SET();
 
 void LCD_SET(){
-    //選択ポート
-    if(selected_port==1){
-        ev3_lcd_draw_string("   Port 1    ",0,20);
+    if(end==true){
+        ev3_lcd_fill_rect(0,0,EV3_LCD_WIDTH,EV3_LCD_HEIGHT,EV3_LCD_WHITE);
+        ev3_led_set_color(LED_RED);
+        ev3_lcd_draw_string("Value Sending",0,20);
+        ev3_lcd_draw_string("    was quited",0,40);
+        ev3_lcd_draw_string("Please quit",0,60);
+        ev3_lcd_draw_string("   EV3 Program",0,80);
+        ev3_stp_cyc(BT_RECIEVE);
     }
-    else if(selected_port==2){
-        ev3_lcd_draw_string("   Port 2    ",0,20);
-    }
-    else if(selected_port==3){
-        ev3_lcd_draw_string("   Port 3    ",0,20);
-    }
-    else if(selected_port==4){
-        ev3_lcd_draw_string("   Port 4    ",0,20);
-    }
-    else if(selected_port==5){
-        ev3_lcd_draw_string("   Port A    ",0,20);
-    }
-    else if(selected_port==6){
-        ev3_lcd_draw_string("   Port B    ",0,20);
-    }
-    else if(selected_port==7){
-        ev3_lcd_draw_string("   Port C    ",0,20);
-    }
-    else if(selected_port==8){
-        ev3_lcd_draw_string("   Port D    ",0,20);
-    }
+    else{
+        //選択ポート
+        if(selected_port==1){
+            ev3_lcd_draw_string("   Port 1    ",0,20);
+        }
+        else if(selected_port==2){
+            ev3_lcd_draw_string("   Port 2    ",0,20);
+        }
+        else if(selected_port==3){
+            ev3_lcd_draw_string("   Port 3    ",0,20);
+        }
+        else if(selected_port==4){
+            ev3_lcd_draw_string("   Port 4    ",0,20);
+        }
+        else if(selected_port==5){
+            ev3_lcd_draw_string("   Port A    ",0,20);
+        }
+        else if(selected_port==6){
+            ev3_lcd_draw_string("   Port B    ",0,20);
+        }
+        else if(selected_port==7){
+            ev3_lcd_draw_string("   Port C    ",0,20);
+        }
+        else if(selected_port==8){
+            ev3_lcd_draw_string("   Port D    ",0,20);
+        }
 
-    //センサー種類と計測モード
-    if(sensor[selected_port]==0){
-        ev3_lcd_draw_string("   NONE    ",0,40);
-        ev3_sensor_config(selected_port,NONE_SENSOR);
-        ev3_motor_config(selected_port-4,0);
-        ev3_lcd_draw_string("   none    ",0,60);
-    }
-    else if(sensor[selected_port]==1){
-        ev3_lcd_draw_string("   ULTRA SONIC    ",0,40);
-        ev3_sensor_config(selected_port,ULTRASONIC_SENSOR);
-        if(sensor_mode[selected_port]==0){
-            ev3_lcd_draw_string("   distance    ",0,60);
+        //センサー種類と計測モード
+        if(sensor[selected_port]==0){
+            ev3_lcd_draw_string("   NONE    ",0,40);
+            ev3_sensor_config(selected_port,NONE_SENSOR);
+            ev3_motor_config(selected_port-4,0);
+            ev3_lcd_draw_string("   none    ",0,60);
         }
-        else if(sensor_mode[selected_port]==1){
-            ev3_lcd_draw_string("   listen    ",0,60);
+        else if(sensor[selected_port]==1){
+            ev3_lcd_draw_string("   ULTRA SONIC    ",0,40);
+            ev3_sensor_config(selected_port,ULTRASONIC_SENSOR);
+            if(sensor_mode[selected_port]==0){
+                ev3_lcd_draw_string("   distance    ",0,60);
+            }
+            else if(sensor_mode[selected_port]==1){
+                ev3_lcd_draw_string("   listen    ",0,60);
+            }
         }
-    }
-    else if(sensor[selected_port]==2){
-        ev3_lcd_draw_string("   GYRO            ",0,40);
-        ev3_sensor_config(selected_port,GYRO_SENSOR);
-        if(sensor_mode[selected_port]==0){
-            ev3_lcd_draw_string("   angle    ",0,60);
+        else if(sensor[selected_port]==2){
+            ev3_lcd_draw_string("   GYRO            ",0,40);
+            ev3_sensor_config(selected_port,GYRO_SENSOR);
+            if(sensor_mode[selected_port]==0){
+                ev3_lcd_draw_string("   angle    ",0,60);
+            }
+            else if(sensor_mode[selected_port]==1){
+                ev3_lcd_draw_string("   rate    ",0,60);
+            }
         }
-        else if(sensor_mode[selected_port]==1){
-            ev3_lcd_draw_string("   rate    ",0,60);
+        else if(sensor[selected_port]==3){
+            ev3_lcd_draw_string("   TOUCH           ",0,40);
+            ev3_sensor_config(selected_port,TOUCH_SENSOR);
+            ev3_lcd_draw_string("   state    ",0,60);
         }
-    }
-    else if(sensor[selected_port]==3){
-        ev3_lcd_draw_string("   TOUCH           ",0,40);
-        ev3_sensor_config(selected_port,TOUCH_SENSOR);
-        ev3_lcd_draw_string("   state    ",0,60);
-    }
-    else if(sensor[selected_port]==4){
-        ev3_lcd_draw_string("   COLOR           ",0,40);
-        ev3_sensor_config(selected_port,COLOR_SENSOR);
-        if(sensor_mode[selected_port]==0){
-            ev3_lcd_draw_string("   reflect    ",0,60);
+        else if(sensor[selected_port]==4){
+            ev3_lcd_draw_string("   COLOR           ",0,40);
+            ev3_sensor_config(selected_port,COLOR_SENSOR);
+            if(sensor_mode[selected_port]==0){
+                ev3_lcd_draw_string("   reflect    ",0,60);
+            }
+            else if(sensor_mode[selected_port]==1){
+                ev3_lcd_draw_string("   ambient    ",0,60);
+            }
+            else if(sensor_mode[selected_port]==2){
+                ev3_lcd_draw_string("   color    ",0,60);
+            }
+            else if(sensor_mode[selected_port]==3){
+                ev3_lcd_draw_string("   rgb    ",0,60);
+            }
         }
-        else if(sensor_mode[selected_port]==1){
-            ev3_lcd_draw_string("   ambient    ",0,60);
+        else if(sensor[selected_port]==5){
+            ev3_lcd_draw_string("   HT COLOR        ",0,40);
+            ev3_sensor_config(selected_port,HT_NXT_COLOR_SENSOR);
+            if(sensor_mode[selected_port]==0){
+                ev3_lcd_draw_string("   color    ",0,60);
+            }
+            else if(sensor_mode[selected_port]==1){
+                ev3_lcd_draw_string("   rgb    ",0,60);
+            }
         }
-        else if(sensor_mode[selected_port]==2){
-            ev3_lcd_draw_string("   color    ",0,60);
+        else if(sensor[selected_port]==6){
+            ev3_lcd_draw_string("   L MOTOR        ",0,40);
+            ev3_motor_config(selected_port-4,LARGE_MOTOR);
+            if(sensor_mode[selected_port]==0){
+                ev3_lcd_draw_string("   angle    ",0,60);
+            }
+            else if(sensor_mode[selected_port]==1){
+                ev3_lcd_draw_string("   power    ",0,60);
+            }
         }
-        else if(sensor_mode[selected_port]==3){
-            ev3_lcd_draw_string("   rgb    ",0,60);
-        }
-    }
-    else if(sensor[selected_port]==5){
-        ev3_lcd_draw_string("   HT COLOR        ",0,40);
-        ev3_sensor_config(selected_port,HT_NXT_COLOR_SENSOR);
-        if(sensor_mode[selected_port]==0){
-            ev3_lcd_draw_string("   color    ",0,60);
-        }
-        else if(sensor_mode[selected_port]==1){
-            ev3_lcd_draw_string("   rgb    ",0,60);
-        }
-    }
-    else if(sensor[selected_port]==6){
-        ev3_lcd_draw_string("   L MOTOR        ",0,40);
-        ev3_motor_config(selected_port-4,LARGE_MOTOR);
-        if(sensor_mode[selected_port]==0){
-            ev3_lcd_draw_string("   angle    ",0,60);
-        }
-        else if(sensor_mode[selected_port]==1){
-            ev3_lcd_draw_string("   power    ",0,60);
-        }
-    }
-    else if(sensor[selected_port]==7){
-        ev3_lcd_draw_string("   M MOTOR        ",0,40);
-        ev3_motor_config(selected_port-4,MEDIUM_MOTOR);
-        if(sensor_mode[selected_port]==0){
-            ev3_lcd_draw_string("   angle    ",0,60);
-        }
-        else if(sensor_mode[selected_port]==1){
-            ev3_lcd_draw_string("   power    ",0,60);
+        else if(sensor[selected_port]==7){
+            ev3_lcd_draw_string("   M MOTOR        ",0,40);
+            ev3_motor_config(selected_port-4,MEDIUM_MOTOR);
+            if(sensor_mode[selected_port]==0){
+                ev3_lcd_draw_string("   angle    ",0,60);
+            }
+            else if(sensor_mode[selected_port]==1){
+                ev3_lcd_draw_string("   power    ",0,60);
+            }
         }
     }
 }
@@ -375,11 +381,14 @@ void Send_value(){
     
 }
 
-void bt_task(intptr_t unused)
+void bt_recieve(intptr_t unused)
 {
     Recieve_value();
 
     LCD_SET();
+}
 
+void bt_send(intptr_t unused)
+{
     Send_value();
 }

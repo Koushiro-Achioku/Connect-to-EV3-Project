@@ -74,7 +74,8 @@
 #ifndef TOPPERS_MACRO_ONLY
 
 extern void	main_task(intptr_t exinf);
-extern void bt_task(intptr_t exinf);
+extern void bt_recieve(intptr_t exinf);
+extern void bt_send(intptr_t exinf);
 //extern void	tex_routine(TEXPTN texptn, intptr_t exinf);
 //#ifdef CPUEXC1
 //extern void	cpuexc_handler(void *p_excinf);
