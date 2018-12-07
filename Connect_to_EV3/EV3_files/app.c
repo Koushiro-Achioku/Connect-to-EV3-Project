@@ -189,28 +189,28 @@ void LCD_SET(){
     }
     else{
         //選択ポート
-        if(selected_port==1){
+        if(selected_port==0){
             ev3_lcd_draw_string("   Port 1    ",0,20);
         }
-        else if(selected_port==2){
+        else if(selected_port==1){
             ev3_lcd_draw_string("   Port 2    ",0,20);
         }
-        else if(selected_port==3){
+        else if(selected_port==2){
             ev3_lcd_draw_string("   Port 3    ",0,20);
         }
-        else if(selected_port==4){
+        else if(selected_port==3){
             ev3_lcd_draw_string("   Port 4    ",0,20);
         }
-        else if(selected_port==5){
+        else if(selected_port==4){
             ev3_lcd_draw_string("   Port A    ",0,20);
         }
-        else if(selected_port==6){
+        else if(selected_port==5){
             ev3_lcd_draw_string("   Port B    ",0,20);
         }
-        else if(selected_port==7){
+        else if(selected_port==6){
             ev3_lcd_draw_string("   Port C    ",0,20);
         }
-        else if(selected_port==8){
+        else if(selected_port==7){
             ev3_lcd_draw_string("   Port D    ",0,20);
         }
 

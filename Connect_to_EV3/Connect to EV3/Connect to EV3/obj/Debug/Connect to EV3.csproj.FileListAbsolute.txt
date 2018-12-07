@@ -60,3 +60,14 @@ C:\Users\achio.DESKTOP-KAELS97\Desktop\Connect_to_EV3\Connect_to_EV3 Ver.β1.4.0
 C:\Users\achio.DESKTOP-KAELS97\Desktop\Connect_to_EV3\Connect_to_EV3 Ver.β1.4.0\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.csproj.CoreCompileInputs.cache
 C:\Users\achio.DESKTOP-KAELS97\Desktop\Connect_to_EV3\Connect_to_EV3 Ver.β1.4.0\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.exe
 C:\Users\achio.DESKTOP-KAELS97\Desktop\Connect_to_EV3\Connect_to_EV3 Ver.β1.4.0\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.pdb
+C:\github\Connect-to-EV3-Project\Connect_to_EV3\Connect to EV3\Connect to EV3\bin\Debug\Connect to EV3.exe.config
+C:\github\Connect-to-EV3-Project\Connect_to_EV3\Connect to EV3\Connect to EV3\bin\Debug\Connect to EV3.exe
+C:\github\Connect-to-EV3-Project\Connect_to_EV3\Connect to EV3\Connect to EV3\bin\Debug\Connect to EV3.pdb
+C:\github\Connect-to-EV3-Project\Connect_to_EV3\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.csprojAssemblyReference.cache
+C:\github\Connect-to-EV3-Project\Connect_to_EV3\Connect to EV3\Connect to EV3\obj\Debug\Connect_to_EV3.Form1.resources
+C:\github\Connect-to-EV3-Project\Connect_to_EV3\Connect to EV3\Connect to EV3\obj\Debug\Connect_to_EV3.Form2.resources
+C:\github\Connect-to-EV3-Project\Connect_to_EV3\Connect to EV3\Connect to EV3\obj\Debug\Connect_to_EV3.Properties.Resources.resources
+C:\github\Connect-to-EV3-Project\Connect_to_EV3\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.csproj.GenerateResource.cache
+C:\github\Connect-to-EV3-Project\Connect_to_EV3\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.csproj.CoreCompileInputs.cache
+C:\github\Connect-to-EV3-Project\Connect_to_EV3\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.exe
+C:\github\Connect-to-EV3-Project\Connect_to_EV3\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.pdb

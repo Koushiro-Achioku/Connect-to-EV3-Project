@@ -438,6 +438,7 @@ namespace Connect_to_EV3
                     port1[1] = '0';
                     port1[2] = '0';
                     label_P1m.Text = "NONE";
+                    btn_P1_reset.Enabled = false;
                     break;
                 case "ULTRA SONIC":
                     numericUpDown_P1m.Maximum = 1;
@@ -445,6 +446,7 @@ namespace Connect_to_EV3
                     port1[1] = '1';
                     port1[2] = '0';
                     label_P1m.Text = "距離測定";
+                    btn_P1_reset.Enabled = false;
                     break;
                 case "GYRO":
                     numericUpDown_P1m.Maximum = 1;
@@ -452,6 +454,7 @@ namespace Connect_to_EV3
                     port1[1] = '2';
                     port1[2] = '0';
                     label_P1m.Text = "角位置";
+                    btn_P1_reset.Enabled = true;
                     break;
                 case "TOUCH":
                     numericUpDown_P1m.Maximum = 0;
@@ -459,6 +462,7 @@ namespace Connect_to_EV3
                     port1[1] = '3';
                     port1[2] = '0';
                     label_P1m.Text = "状態(押・離)";
+                    btn_P1_reset.Enabled = false;
                     break;
                 case "COLOR":
                     numericUpDown_P1m.Maximum = 3;
@@ -466,6 +470,7 @@ namespace Connect_to_EV3
                     port1[1] = '4';
                     port1[2] = '0';
                     label_P1m.Text = "反射光";
+                    btn_P1_reset.Enabled = false;
                     break;
                 case "HT COLOR":
                     numericUpDown_P1m.Maximum = 1;
@@ -473,6 +478,7 @@ namespace Connect_to_EV3
                     port1[1] = '5';
                     port1[2] = '0';
                     label_P1m.Text = "カラー";
+                    btn_P1_reset.Enabled = false;
                     break;
             }
 
@@ -586,6 +592,7 @@ namespace Connect_to_EV3
                     port2[1] = '0';
                     port2[2] = '0';
                     label_P2m.Text = "NONE";
+                    btn_P2_reset.Enabled = false;
                     break;
                 case "ULTRA SONIC":
                     numericUpDown_P2m.Maximum = 1;
@@ -593,6 +600,7 @@ namespace Connect_to_EV3
                     port2[1] = '1';
                     port2[2] = '0';
                     label_P2m.Text = "距離測定";
+                    btn_P2_reset.Enabled = false;
                     break;
                 case "GYRO":
                     numericUpDown_P2m.Maximum = 1;
@@ -600,6 +608,7 @@ namespace Connect_to_EV3
                     port2[1] = '2';
                     port2[2] = '0';
                     label_P2m.Text = "角位置";
+                    btn_P2_reset.Enabled = true;
                     break;
                 case "TOUCH":
                     numericUpDown_P2m.Maximum = 0;
@@ -607,6 +616,7 @@ namespace Connect_to_EV3
                     port2[1] = '3';
                     port2[2] = '0';
                     label_P2m.Text = "状態(押・離)";
+                    btn_P2_reset.Enabled = false;
                     break;
                 case "COLOR":
                     numericUpDown_P2m.Maximum = 3;
@@ -614,6 +624,7 @@ namespace Connect_to_EV3
                     port2[1] = '4';
                     port2[2] = '0';
                     label_P2m.Text = "反射光";
+                    btn_P2_reset.Enabled = false;
                     break;
                 case "HT COLOR":
                     numericUpDown_P2m.Maximum = 1;
@@ -621,6 +632,7 @@ namespace Connect_to_EV3
                     port2[1] = '5';
                     port2[2] = '0';
                     label_P2m.Text = "カラー";
+                    btn_P2_reset.Enabled = false;
                     break;
             }
             numericUpDown_P2m.Value = 0;
@@ -733,6 +745,7 @@ namespace Connect_to_EV3
                     port3[1] = '0';
                     port3[2] = '0';
                     label_P3m.Text = "NONE";
+                    btn_P3_reset.Enabled = false;
                     break;
                 case "ULTRA SONIC":
                     numericUpDown_P3m.Maximum = 1;
@@ -740,6 +753,7 @@ namespace Connect_to_EV3
                     port3[1] = '1';
                     port3[2] = '0';
                     label_P3m.Text = "距離測定";
+                    btn_P3_reset.Enabled = false;
                     break;
                 case "GYRO":
                     numericUpDown_P3m.Maximum = 1;
@@ -747,6 +761,7 @@ namespace Connect_to_EV3
                     port3[1] = '2';
                     port3[2] = '0';
                     label_P3m.Text = "角位置";
+                    btn_P3_reset.Enabled = true;
                     break;
                 case "TOUCH":
                     numericUpDown_P3m.Maximum = 0;
@@ -754,6 +769,7 @@ namespace Connect_to_EV3
                     port3[1] = '3';
                     port3[2] = '0';
                     label_P3m.Text = "状態(押・離)";
+                    btn_P3_reset.Enabled = false;
                     break;
                 case "COLOR":
                     numericUpDown_P3m.Maximum = 3;
@@ -761,6 +777,7 @@ namespace Connect_to_EV3
                     port3[1] = '4';
                     port3[2] = '0';
                     label_P3m.Text = "反射光";
+                    btn_P3_reset.Enabled = false;
                     break;
                 case "HT COLOR":
                     numericUpDown_P3m.Maximum = 1;
@@ -768,6 +785,7 @@ namespace Connect_to_EV3
                     port3[1] = '5';
                     port3[2] = '0';
                     label_P3m.Text = "カラー";
+                    btn_P3_reset.Enabled = false;
                     break;
             }
             numericUpDown_P3m.Value = 0;
@@ -880,6 +898,7 @@ namespace Connect_to_EV3
                     port4[1] = '0';
                     port4[2] = '0';
                     label_P4m.Text = "NONE";
+                    btn_P4_reset.Enabled = false;
                     break;
                 case "ULTRA SONIC":
                     numericUpDown_P4m.Maximum = 1;
@@ -887,6 +906,7 @@ namespace Connect_to_EV3
                     port4[1] = '1';
                     port4[2] = '0';
                     label_P4m.Text = "距離測定";
+                    btn_P4_reset.Enabled = false;
                     break;
                 case "GYRO":
                     numericUpDown_P4m.Maximum = 1;
@@ -894,6 +914,7 @@ namespace Connect_to_EV3
                     port4[1] = '2';
                     port4[2] = '0';
                     label_P4m.Text = "角位置";
+                    btn_P4_reset.Enabled = true;
                     break;
                 case "TOUCH":
                     numericUpDown_P4m.Maximum = 0;
@@ -901,6 +922,7 @@ namespace Connect_to_EV3
                     port4[1] = '3';
                     port4[2] = '0';
                     label_P4m.Text = "状態(押・離)";
+                    btn_P4_reset.Enabled = false;
                     break;
                 case "COLOR":
                     numericUpDown_P4m.Maximum = 3;
@@ -908,6 +930,7 @@ namespace Connect_to_EV3
                     port4[1] = '4';
                     port4[2] = '0';
                     label_P4m.Text = "反射光";
+                    btn_P4_reset.Enabled = false;
                     break;
                 case "HT COLOR":
                     numericUpDown_P4m.Maximum = 1;
@@ -915,6 +938,7 @@ namespace Connect_to_EV3
                     port4[1] = '5';
                     port4[2] = '0';
                     label_P4m.Text = "カラー";
+                    btn_P4_reset.Enabled = false;
                     break;
             }
             numericUpDown_P4m.Value = 0;
@@ -1022,6 +1046,7 @@ namespace Connect_to_EV3
                     portA[1] = '0';
                     portA[2] = '0';
                     label_PAm.Text = "NONE";
+                    btn_PA_reset.Enabled = false;
                     break;
                 case "L motor":
                     numericUpDown_PAm.Maximum = 1;
@@ -1029,6 +1054,7 @@ namespace Connect_to_EV3
                     portA[1] = '6';
                     portA[2] = '0';
                     label_PAm.Text = "角位置";
+                    btn_PA_reset.Enabled = true;
                     break;
                 case "M motor":
                     numericUpDown_PAm.Maximum = 1;
@@ -1036,6 +1062,7 @@ namespace Connect_to_EV3
                     portA[1] = '7';
                     portA[2] = '0';
                     label_PAm.Text = "角位置";
+                    btn_PA_reset.Enabled = true;
                     break;
             }
             numericUpDown_PAm.Value = 0;
@@ -1088,6 +1115,7 @@ namespace Connect_to_EV3
                     portB[1] = '0';
                     portB[2] = '0';
                     label_PBm.Text = "NONE";
+                    btn_PB_reset.Enabled = false;
                     break;
                 case "L motor":
                     numericUpDown_PBm.Maximum = 1;
@@ -1095,6 +1123,7 @@ namespace Connect_to_EV3
                     portB[1] = '6';
                     portB[2] = '0';
                     label_PBm.Text = "角位置";
+                    btn_PB_reset.Enabled = true;
                     break;
                 case "M motor":
                     numericUpDown_PBm.Maximum = 1;
@@ -1102,6 +1131,7 @@ namespace Connect_to_EV3
                     portB[1] = '7';
                     portB[2] = '0';
                     label_PBm.Text = "角位置";
+                    btn_PB_reset.Enabled = true;
                     break;
             }
             numericUpDown_PBm.Value = 0;
@@ -1154,6 +1184,7 @@ namespace Connect_to_EV3
                     portC[1] = '0';
                     portC[2] = '0';
                     label_PCm.Text = "NONE";
+                    btn_PC_reset.Enabled = false;
                     break;
                 case "L motor":
                     numericUpDown_PCm.Maximum = 1;
@@ -1161,6 +1192,7 @@ namespace Connect_to_EV3
                     portC[1] = '6';
                     portC[2] = '0';
                     label_PCm.Text = "角位置";
+                    btn_PC_reset.Enabled = true;
                     break;
                 case "M motor":
                     numericUpDown_PCm.Maximum = 1;
@@ -1168,6 +1200,7 @@ namespace Connect_to_EV3
                     portC[1] = '7';
                     portC[2] = '0';
                     label_PCm.Text = "角位置";
+                    btn_PC_reset.Enabled = true;
                     break;
             }
             numericUpDown_PCm.Value = 0;
@@ -1220,6 +1253,7 @@ namespace Connect_to_EV3
                     portD[1] = '0';
                     portD[2] = '0';
                     label_PDm.Text = "NONE";
+                    btn_PD_reset.Enabled = false;
                     break;
                 case "L motor":
                     numericUpDown_PDm.Maximum = 1;
@@ -1227,6 +1261,7 @@ namespace Connect_to_EV3
                     portD[1] = '6';
                     portD[2] = '0';
                     label_PDm.Text = "角位置";
+                    btn_PD_reset.Enabled = true;
                     break;
                 case "M motor":
                     numericUpDown_PDm.Maximum = 1;
@@ -1234,6 +1269,7 @@ namespace Connect_to_EV3
                     portD[1] = '7';
                     portD[2] = '0';
                     label_PDm.Text = "角位置";
+                    btn_PD_reset.Enabled = true;
                     break;
             }
             numericUpDown_PDm.Value = 0;
@@ -1438,18 +1474,19 @@ namespace Connect_to_EV3
         private void btn_PA_reset_Click(object sender, EventArgs e)
         {
             char[] resetA = new char[4] { 'R', 'A', '0', '0' };
-            string s = new string(resetA);
             switch (comboBox_PA.SelectedItem)
             {
                 case "NONE":
                     break;
                 case "L motor":
                     resetA[2] = 'L';
-                    if (serialPort1.IsOpen == true) { serialPort1.Write(s); }
+                    string sL = new string(resetA);
+                    if (serialPort1.IsOpen == true) { serialPort1.Write(sL); }
                     break;
                 case "M motor":
                     resetA[2] = 'M';
-                    if (serialPort1.IsOpen == true) { serialPort1.Write(s); }
+                    string sM = new string(resetA);
+                    if (serialPort1.IsOpen == true) { serialPort1.Write(sM); }
                     break;
             }
         }
@@ -1457,18 +1494,19 @@ namespace Connect_to_EV3
         private void btn_PB_reset_Click(object sender, EventArgs e)
         {
             char[] resetB = new char[4] { 'R', 'B', '0', '0' };
-            string s = new string(resetB);
             switch (comboBox_PB.SelectedItem)
             {
                 case "NONE":
                     break;
                 case "L motor":
                     resetB[2] = 'L';
-                    if (serialPort1.IsOpen == true) { serialPort1.Write(s); }
+                    string sL = new string(resetB);
+                    if (serialPort1.IsOpen == true) { serialPort1.Write(sL); }
                     break;
                 case "M motor":
                     resetB[2] = 'M';
-                    if (serialPort1.IsOpen == true) { serialPort1.Write(s); }
+                    string sM = new string(resetB);
+                    if (serialPort1.IsOpen == true) { serialPort1.Write(sM); }
                     break;
             }
         }
@@ -1476,18 +1514,19 @@ namespace Connect_to_EV3
         private void btn_PC_reset_Click(object sender, EventArgs e)
         {
             char[] resetC = new char[4] { 'R', 'C', '0', '0' };
-            string s = new string(resetC);
             switch (comboBox_PC.SelectedItem)
             {
                 case "NONE":
                     break;
                 case "L motor":
                     resetC[2] = 'L';
-                    if (serialPort1.IsOpen == true) { serialPort1.Write(s); }
+                    string sL = new string(resetC);
+                    if (serialPort1.IsOpen == true) { serialPort1.Write(sL); }
                     break;
                 case "M motor":
                     resetC[2] = 'M';
-                    if (serialPort1.IsOpen == true) { serialPort1.Write(s); }
+                    string sM = new string(resetC);
+                    if (serialPort1.IsOpen == true) { serialPort1.Write(sM); }
                     break;
             }
         }
@@ -1502,11 +1541,13 @@ namespace Connect_to_EV3
                     break;
                 case "L motor":
                     resetD[2] = 'L';
-                    if (serialPort1.IsOpen == true) { serialPort1.Write(s); }
+                    string sL = new string(resetD);
+                    if (serialPort1.IsOpen == true) { serialPort1.Write(sL); }
                     break;
                 case "M motor":
                     resetD[2] = 'M';
-                    if (serialPort1.IsOpen == true) { serialPort1.Write(s); }
+                    string sM = new string(resetD);
+                    if (serialPort1.IsOpen == true) { serialPort1.Write(sM); }
                     break;
             }
         }
