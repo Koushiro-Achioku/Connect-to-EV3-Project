@@ -72,18 +72,26 @@ void main_task(intptr_t unused)
     {
         case 0:
             bt = ev3_serial_open_file(EV3_SERIAL_BT);
+            ev3_lcd_fill_rect(0,0,EV3_LCD_WIDTH,EV3_LCD_HEIGHT,EV3_LCD_WHITE);
+            ev3_lcd_draw_string("Please Start",20,0);
+            ev3_lcd_draw_String("BT Mode",20,20);
             break;
         case 1:
             bt = ev3_serial_open_file(EV3_SERIAL_UART);
+            ev3_lcd_fill_rect(0,0,EV3_LCD_WIDTH,EV3_LCD_HEIGHT,EV3_LCD_WHITE);
+            ev3_lcd_draw_string("Please Start",20,0);
+            ev3_lcd_draw_String("UART Mode",20,20);
             break;
         default:
             bt = ev3_serial_open_file(EV3_SERIAL_BT);
+            ev3_lcd_fill_rect(0,0,EV3_LCD_WIDTH,EV3_LCD_HEIGHT,EV3_LCD_WHITE);
+            ev3_lcd_draw_string("Please Start",20,0);
+            ev3_lcd_draw_String("BT Mode",20,20);
             break;
     }
 
     assert(bt != NULL);
-    ev3_lcd_fill_rect(0,0,EV3_LCD_WIDTH,EV3_LCD_HEIGHT,EV3_LCD_WHITE);
-    ev3_lcd_draw_string("Please Start",20,0);
+    
 
     while(1){
         uint8_t c = fgetc(bt);
