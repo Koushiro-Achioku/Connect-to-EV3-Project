@@ -19,8 +19,8 @@
 
 ///////////////////////////////////////////////////////////////////////
 
-static int      bt_cmd = 0;     /* Bluetoothコマンド 1:リモートスタート */
-static FILE     *bt = NULL;     /* Bluetoothファイルハンドル */
+static int      bt_cmd = 0;
+static FILE     *bt = NULL;  //ファイルポインタ     
 
 rgb_raw_t rgb_val;
 uint8_t color_val;
