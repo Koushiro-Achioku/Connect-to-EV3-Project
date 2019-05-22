@@ -23,3 +23,8 @@ gitをお使いの方は、以下のように打ち込んでこのリポジト�
 $ git clone git@github.com:Koushiro-Achioku/Connect-to-EV3-Project.git
 ```
 もしgitをお使いでない場合は、"Clone or download" を押し、その後 "Download ZIP" を押してダウンロードしてください。
+
+
+This software is released under the MIT License, see LICENSE.txt.
+
+（このソフトウェアは、MITライセンスのもとで公開されています。LICENSE.txtを見てください。）
