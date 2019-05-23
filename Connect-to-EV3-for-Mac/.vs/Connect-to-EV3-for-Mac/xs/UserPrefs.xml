@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{CDF0DAA2-8D7B-4D4F-8A48-3BA6D542885F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Connect-to-EV3-for-Mac/ViewController.cs">
+    <Files>
+      <File FileName="Connect-to-EV3-for-Mac/ViewController.cs" Line="542" Column="10" />
+      <File FileName="Connect-to-EV3-for-Mac/Main.cs" Line="10" Column="38" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Connect-to-EV3-for-Mac" expanded="True">
+            <Node name="Connect-to-EV3-for-Mac" expanded="True">
+              <Node name="Resources" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Connect-to-EV3-for-Mac PreferredExecutionTarget="Test1" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

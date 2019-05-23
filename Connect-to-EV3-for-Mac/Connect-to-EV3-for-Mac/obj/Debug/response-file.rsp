@@ -1,0 +1,17 @@
+/verbose
+/debug
+/output:/Users/koushiro/Projects/Connect-to-EV3-for-Mac/Connect-to-EV3-for-Mac/bin/Debug/
+"/name:Connect to EV3"
+/profile:Xamarin.Mac,Version=v4.7.2,Profile=Full
+/arch:x86_64
+--http-message-handler=HttpClientHandler
+/minos=10.13
+/nolink
+/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/4.5/mscorlib.dll
+/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/4.5/System.Core.dll
+/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/mono/4.5/System.dll
+/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/reference/full/Xamarin.Mac.dll
+/assembly:/Library/Frameworks/Xamarin.Mac.framework/Versions/Current/lib/reference/full/Xamarin.Mac.dll
+"/root-assembly:/Users/koushiro/Projects/Connect-to-EV3-for-Mac/Connect-to-EV3-for-Mac/bin/Debug/Connect to EV3.exe"
+/sdkroot:/Applications/Xcode.app/Contents/Developer
+--cache:/Users/koushiro/Projects/Connect-to-EV3-for-Mac/Connect-to-EV3-for-Mac/obj/Debug/mmp-cache
