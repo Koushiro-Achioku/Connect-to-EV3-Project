@@ -27,5 +27,5 @@ $ git clone git@github.com:Koushiro-Achioku/Connect-to-EV3-Project.git
 # LICENSE
 This software is released under the MIT License, see LICENSE.txt.
 
-#ライセンス
+# ライセンス
 （このソフトウェアは、MITライセンスのもとで公開されています。LICENSE.txtを見てください。）
