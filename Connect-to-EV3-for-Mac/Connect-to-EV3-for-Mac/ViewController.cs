@@ -443,7 +443,7 @@ namespace ConnecttoEV3forMac
                     Btn_Image_1.Image = NSImage.ImageNamed("Touch.png");
                     port1[1] = '3';
                     port1[2] = '0';
-                    Label_mode_1.StringValue = "状態(押・離)";
+                    Label_mode_1.StringValue = "状態";
                     Btn_Reset_1.Enabled = false;
                     break;
                 case "COLOR":
@@ -500,7 +500,7 @@ namespace ConnecttoEV3forMac
                     break;
                 case "TOUCH":
                     port1[2] = '0';
-                    Label_mode_1.StringValue = "状態(押・離)";
+                    Label_mode_1.StringValue = "状態";
                     break;
                 case "COLOR":
                     if (Stepper_1.IntValue == 0)
@@ -540,6 +540,400 @@ namespace ConnecttoEV3forMac
             string s = new string(port1);
             if (port.IsOpen == true) { port.Write(s); }
         }
+
+        partial void ComboBox_2_Selected(NSObject sender)
+        {
+            switch (ComboBox_2.StringValue)
+            {
+                case "NONE":
+                    Stepper_2.MaxValue = 0;
+                    Btn_Image_2.Image = NSImage.ImageNamed("none.png");
+                    port2[1] = '0';
+                    port2[2] = '0';
+                    Label_mode_2.StringValue = "none";
+                    Btn_Reset_2.Enabled = false;
+                    break;
+                case "ULTRA SONIC":
+                    Stepper_2.MaxValue = 1;
+                    Btn_Image_2.Image = NSImage.ImageNamed("Ultrasonic.png");
+                    port2[1] = '1';
+                    port2[2] = '0';
+                    Label_mode_2.StringValue = "距離測定";
+                    Btn_Reset_2.Enabled = false;
+                    break;
+                case "GYRO":
+                    Stepper_2.MaxValue = 1;
+                    Btn_Image_2.Image = NSImage.ImageNamed("Gyro.png");
+                    port2[1] = '2';
+                    port2[2] = '0';
+                    Label_mode_2.StringValue = "角位置";
+                    Btn_Reset_2.Enabled = true;
+                    break;
+                case "TOUCH":
+                    Stepper_2.MaxValue = 0;
+                    Btn_Image_2.Image = NSImage.ImageNamed("Touch.png");
+                    port2[1] = '3';
+                    port2[2] = '0';
+                    Label_mode_2.StringValue = "状態";
+                    Btn_Reset_2.Enabled = false;
+                    break;
+                case "COLOR":
+                    Stepper_2.MaxValue = 3;
+                    Btn_Image_2.Image = NSImage.ImageNamed("Color.png");
+                    port2[1] = '4';
+                    port2[2] = '0';
+                    Label_mode_2.StringValue = "反射光";
+                    Btn_Reset_2.Enabled = false;
+                    break;
+                case "HT COLOR":
+                    Stepper_2.MaxValue = 1;
+                    Btn_Image_2.Image = NSImage.ImageNamed("HTColor.png");
+                    port2[1] = '5';
+                    port2[2] = '0';
+                    Label_mode_2.StringValue = "カラー";
+                    Btn_Reset_2.Enabled = false;
+                    break;
+            }
+            Stepper_2.IntValue = 0;
+            string s = new string(port2);
+            if (port.IsOpen == true) { port.Write(s); }
+        }
+
+        partial void Stepper_2_Pushed(NSObject sender)
+        {
+            switch (ComboBox_2.StringValue)
+            {
+                case "NONE":
+                    break;
+                case "ULTRA SONIC":
+                    if (Stepper_2.IntValue == 0)
+                    {
+                        port2[2] = '0';
+                        Label_mode_2.StringValue = "距離測定";
+                    }
+                    else
+                    {
+                        port2[2] = '1';
+                        Label_mode_2.StringValue = "超音波信号";
+                    }
+                    break;
+                case "GYRO":
+                    if (Stepper_2.IntValue == 0)
+                    {
+                        port2[2] = '0';
+                        Label_mode_2.StringValue = "角位置";
+                    }
+                    else
+                    {
+                        port2[2] = '1';
+                        Label_mode_2.StringValue = "角速度";
+                    }
+                    break;
+                case "TOUCH":
+                    port2[2] = '0';
+                    Label_mode_2.StringValue = "状態";
+                    break;
+                case "COLOR":
+                    if (Stepper_2.IntValue == 0)
+                    {
+                        port2[2] = '0';
+                        Label_mode_2.StringValue = "反射光";
+                    }
+                    else if (Stepper_2.IntValue == 1)
+                    {
+                        port2[2] = '1';
+                        Label_mode_2.StringValue = "周辺光";
+                    }
+                    else if (Stepper_2.IntValue == 2)
+                    {
+                        port2[2] = '2';
+                        Label_mode_2.StringValue = "カラー";
+                    }
+                    else if (Stepper_2.IntValue == 3)
+                    {
+                        port2[2] = '3';
+                        Label_mode_2.StringValue = "RGB";
+                    }
+                    break;
+                case "HT COLOR":
+                    if (Stepper_2.IntValue == 0)
+                    {
+                        port2[2] = '0';
+                        Label_mode_2.StringValue = "カラー";
+                    }
+                    else
+                    {
+                        port2[2] = '1';
+                        Label_mode_2.StringValue = "RGB";
+                    }
+                    break;
+            }
+            string s = new string(port2);
+            if (port.IsOpen == true) { port.Write(s); }
+        }
+
+        partial void ComboBox_3_Selected(NSObject sender)
+        {
+            switch (ComboBox_3.StringValue)
+            {
+                case "NONE":
+                    Stepper_3.MaxValue = 0;
+                    Btn_Image_3.Image = NSImage.ImageNamed("none.png");
+                    port3[1] = '0';
+                    port3[2] = '0';
+                    Label_mode_3.StringValue = "none";
+                    Btn_Reset_3.Enabled = false;
+                    break;
+                case "ULTRA SONIC":
+                    Stepper_3.MaxValue = 1;
+                    Btn_Image_3.Image = NSImage.ImageNamed("Ultrasonic.png");
+                    port3[1] = '1';
+                    port3[2] = '0';
+                    Label_mode_3.StringValue = "距離測定";
+                    Btn_Reset_3.Enabled = false;
+                    break;
+                case "GYRO":
+                    Stepper_3.MaxValue = 1;
+                    Btn_Image_3.Image = NSImage.ImageNamed("Gyro.png");
+                    port3[1] = '2';
+                    port3[2] = '0';
+                    Label_mode_3.StringValue = "角位置";
+                    Btn_Reset_3.Enabled = true;
+                    break;
+                case "TOUCH":
+                    Stepper_3.MaxValue = 0;
+                    Btn_Image_3.Image = NSImage.ImageNamed("Touch.png");
+                    port3[1] = '3';
+                    port3[2] = '0';
+                    Label_mode_3.StringValue = "状態";
+                    Btn_Reset_3.Enabled = false;
+                    break;
+                case "COLOR":
+                    Stepper_3.MaxValue = 3;
+                    Btn_Image_3.Image = NSImage.ImageNamed("Color.png");
+                    port3[1] = '4';
+                    port3[2] = '0';
+                    Label_mode_3.StringValue = "反射光";
+                    Btn_Reset_3.Enabled = false;
+                    break;
+                case "HT COLOR":
+                    Stepper_3.MaxValue = 1;
+                    Btn_Image_3.Image = NSImage.ImageNamed("HTColor.png");
+                    port3[1] = '5';
+                    port3[2] = '0';
+                    Label_mode_3.StringValue = "カラー";
+                    Btn_Reset_3.Enabled = false;
+                    break;
+            }
+            Stepper_3.IntValue = 0;
+            string s = new string(port3);
+            if (port.IsOpen == true) { port.Write(s); }
+        }
+
+        partial void Stepper_3_Pushed(NSObject sender)
+        {
+            switch (ComboBox_3.StringValue)
+            {
+                case "NONE":
+                    break;
+                case "ULTRA SONIC":
+                    if (Stepper_3.IntValue == 0)
+                    {
+                        port3[2] = '0';
+                        Label_mode_3.StringValue = "距離測定";
+                    }
+                    else
+                    {
+                        port3[2] = '1';
+                        Label_mode_3.StringValue = "超音波信号";
+                    }
+                    break;
+                case "GYRO":
+                    if (Stepper_3.IntValue == 0)
+                    {
+                        port3[2] = '0';
+                        Label_mode_3.StringValue = "角位置";
+                    }
+                    else
+                    {
+                        port3[2] = '1';
+                        Label_mode_3.StringValue = "角速度";
+                    }
+                    break;
+                case "TOUCH":
+                    port3[2] = '0';
+                    Label_mode_3.StringValue = "状態";
+                    break;
+                case "COLOR":
+                    if (Stepper_3.IntValue == 0)
+                    {
+                        port3[2] = '0';
+                        Label_mode_3.StringValue = "反射光";
+                    }
+                    else if (Stepper_3.IntValue == 1)
+                    {
+                        port3[2] = '1';
+                        Label_mode_3.StringValue = "周辺光";
+                    }
+                    else if (Stepper_3.IntValue == 2)
+                    {
+                        port3[2] = '2';
+                        Label_mode_3.StringValue = "カラー";
+                    }
+                    else if (Stepper_3.IntValue == 3)
+                    {
+                        port3[2] = '3';
+                        Label_mode_3.StringValue = "RGB";
+                    }
+                    break;
+                case "HT COLOR":
+                    if (Stepper_3.IntValue == 0)
+                    {
+                        port3[2] = '0';
+                        Label_mode_3.StringValue = "カラー";
+                    }
+                    else
+                    {
+                        port3[2] = '1';
+                        Label_mode_3.StringValue = "RGB";
+                    }
+                    break;
+            }
+            string s = new string(port3);
+            if (port.IsOpen == true) { port.Write(s); }
+        }
+
+        partial void ComboBox_4_Selected(NSObject sender)
+        {
+            switch (ComboBox_4.StringValue)
+            {
+                case "NONE":
+                    Stepper_4.MaxValue = 0;
+                    Btn_Image_4.Image = NSImage.ImageNamed("none.png");
+                    port4[1] = '0';
+                    port4[2] = '0';
+                    Label_mode_4.StringValue = "none";
+                    Btn_Reset_4.Enabled = false;
+                    break;
+                case "ULTRA SONIC":
+                    Stepper_4.MaxValue = 1;
+                    Btn_Image_4.Image = NSImage.ImageNamed("Ultrasonic.png");
+                    port4[1] = '1';
+                    port4[2] = '0';
+                    Label_mode_4.StringValue = "距離測定";
+                    Btn_Reset_4.Enabled = false;
+                    break;
+                case "GYRO":
+                    Stepper_4.MaxValue = 1;
+                    Btn_Image_4.Image = NSImage.ImageNamed("Gyro.png");
+                    port4[1] = '2';
+                    port4[2] = '0';
+                    Label_mode_4.StringValue = "角位置";
+                    Btn_Reset_4.Enabled = true;
+                    break;
+                case "TOUCH":
+                    Stepper_4.MaxValue = 0;
+                    Btn_Image_4.Image = NSImage.ImageNamed("Touch.png");
+                    port4[1] = '3';
+                    port4[2] = '0';
+                    Label_mode_4.StringValue = "状態";
+                    Btn_Reset_4.Enabled = false;
+                    break;
+                case "COLOR":
+                    Stepper_4.MaxValue = 3;
+                    Btn_Image_4.Image = NSImage.ImageNamed("Color.png");
+                    port4[1] = '4';
+                    port4[2] = '0';
+                    Label_mode_4.StringValue = "反射光";
+                    Btn_Reset_4.Enabled = false;
+                    break;
+                case "HT COLOR":
+                    Stepper_4.MaxValue = 1;
+                    Btn_Image_4.Image = NSImage.ImageNamed("HTColor.png");
+                    port4[1] = '5';
+                    port4[2] = '0';
+                    Label_mode_4.StringValue = "カラー";
+                    Btn_Reset_4.Enabled = false;
+                    break;
+            }
+            Stepper_4.IntValue = 0;
+            string s = new string(port4);
+            if (port.IsOpen == true) { port.Write(s); }
+        }
+
+        partial void Stepper_4_Pushed(NSObject sender)
+        {
+            switch (ComboBox_4.StringValue)
+            {
+                case "NONE":
+                    break;
+                case "ULTRA SONIC":
+                    if (Stepper_4.IntValue == 0)
+                    {
+                        port4[2] = '0';
+                        Label_mode_4.StringValue = "距離測定";
+                    }
+                    else
+                    {
+                        port4[2] = '1';
+                        Label_mode_4.StringValue = "超音波信号";
+                    }
+                    break;
+                case "GYRO":
+                    if (Stepper_4.IntValue == 0)
+                    {
+                        port4[2] = '0';
+                        Label_mode_4.StringValue = "角位置";
+                    }
+                    else
+                    {
+                        port4[2] = '1';
+                        Label_mode_4.StringValue = "角速度";
+                    }
+                    break;
+                case "TOUCH":
+                    port4[2] = '0';
+                    Label_mode_4.StringValue = "状態";
+                    break;
+                case "COLOR":
+                    if (Stepper_4.IntValue == 0)
+                    {
+                        port4[2] = '0';
+                        Label_mode_4.StringValue = "反射光";
+                    }
+                    else if (Stepper_4.IntValue == 1)
+                    {
+                        port4[2] = '1';
+                        Label_mode_4.StringValue = "周辺光";
+                    }
+                    else if (Stepper_4.IntValue == 2)
+                    {
+                        port4[2] = '2';
+                        Label_mode_4.StringValue = "カラー";
+                    }
+                    else if (Stepper_4.IntValue == 3)
+                    {
+                        port4[2] = '3';
+                        Label_mode_4.StringValue = "RGB";
+                    }
+                    break;
+                case "HT COLOR":
+                    if (Stepper_4.IntValue == 0)
+                    {
+                        port4[2] = '0';
+                        Label_mode_4.StringValue = "カラー";
+                    }
+                    else
+                    {
+                        port4[2] = '1';
+                        Label_mode_4.StringValue = "RGB";
+                    }
+                    break;
+            }
+            string s = new string(port4);
+            if (port.IsOpen == true) { port.Write(s); }
+        }
+
 
     }
 }
