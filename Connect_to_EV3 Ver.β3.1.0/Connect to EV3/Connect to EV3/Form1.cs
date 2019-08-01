@@ -17,7 +17,8 @@ namespace Connect_to_EV3
         Form2 Form_setting = new Form2();
         Form3 Form_setting2 = new Form3();
 
-        public string data="            ";
+        //public string data="            ";
+        public string data;
         public bool writed;
         public bool connected = false;
         public string COM_Port = "COM40";
@@ -451,7 +452,7 @@ namespace Connect_to_EV3
 
                 if (Properties.Settings.Default.light_mode == true)
                 {
-                    if (write_times > 25)
+                    if (write_times > 10)
                     {
                         textBox1.Text = "";
                         write_times = 0;
