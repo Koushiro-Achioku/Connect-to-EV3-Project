@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{CDF0DAA2-8D7B-4D4F-8A48-3BA6D542885F}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Connect-to-EV3-for-Mac/ViewController.cs">
     <Files>
-      <File FileName="Connect-to-EV3-for-Mac/ViewController.cs" Line="414" Column="10" />
+      <File FileName="Connect-to-EV3-for-Mac/ViewController.cs" Line="98" Column="40" />
       <File FileName="Connect-to-EV3-for-Mac/Main.cs" Line="10" Column="38" />
     </Files>
     <Pads>
@@ -14,9 +14,6 @@
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
