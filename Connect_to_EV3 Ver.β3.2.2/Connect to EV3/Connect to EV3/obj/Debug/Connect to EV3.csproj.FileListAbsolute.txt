@@ -130,3 +130,15 @@ C:\Users\achio.DESKTOP-KAELS97\Desktop\Connect_to_EV3\Connect_to_EV3 Ver.β3.2.2
 C:\Users\achio.DESKTOP-KAELS97\Desktop\Connect_to_EV3\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.csproj.CoreCompileInputs.cache
 C:\Users\achio.DESKTOP-KAELS97\Desktop\Connect_to_EV3\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.exe
 C:\Users\achio.DESKTOP-KAELS97\Desktop\Connect_to_EV3\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.pdb
+C:\Users\achio\github\Connect-to-EV3-Project\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\bin\Debug\Connect to EV3.exe.config
+C:\Users\achio\github\Connect-to-EV3-Project\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\bin\Debug\Connect to EV3.exe
+C:\Users\achio\github\Connect-to-EV3-Project\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\bin\Debug\Connect to EV3.pdb
+C:\Users\achio\github\Connect-to-EV3-Project\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.csproj.AssemblyReference.cache
+C:\Users\achio\github\Connect-to-EV3-Project\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\obj\Debug\Connect_to_EV3.Form1.resources
+C:\Users\achio\github\Connect-to-EV3-Project\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\obj\Debug\Connect_to_EV3.Form2.resources
+C:\Users\achio\github\Connect-to-EV3-Project\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\obj\Debug\Connect_to_EV3.Form3.resources
+C:\Users\achio\github\Connect-to-EV3-Project\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\obj\Debug\Connect_to_EV3.Properties.Resources.resources
+C:\Users\achio\github\Connect-to-EV3-Project\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.csproj.GenerateResource.cache
+C:\Users\achio\github\Connect-to-EV3-Project\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.csproj.CoreCompileInputs.cache
+C:\Users\achio\github\Connect-to-EV3-Project\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.exe
+C:\Users\achio\github\Connect-to-EV3-Project\Connect_to_EV3 Ver.β3.2.2\Connect to EV3\Connect to EV3\obj\Debug\Connect to EV3.pdb

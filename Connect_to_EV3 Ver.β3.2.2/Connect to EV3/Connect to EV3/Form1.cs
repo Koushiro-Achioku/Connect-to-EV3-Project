@@ -12,6 +12,8 @@ using System.Threading;
 
 namespace Connect_to_EV3
 {
+    //git test
+
     public partial class Form1 : Form
     {
         Form2 Form_setting = new Form2();
